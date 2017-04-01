@@ -1,0 +1,53 @@
+.form {
+  padding: 0.5em;
+}
+.form-group {
+  padding: 0.8em;
+  border-radius: 3px;
+  border: 1px solid $base-color-light;
+  margin-bottom: 0.5em;
+  > label:not(.radio-control):not(.checkbox-control) {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.9em;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="password"] {
+    border: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .Select {
+    margin: 0 -0.8rem;
+    padding-top: 1px;
+  }
+  .Select-control {
+    height: auto;
+  }
+  .Select-input {
+    height: auto;
+    input {
+      padding: 0 0 0 0.3rem;
+    }
+  }
+  .Select-control:hover {
+    box-shadow: none;
+  }
+  .Select-placeholder {
+    line-height: 1em;
+    padding-left: 0.8rem;
+  }
+  .Select-menu-outer {
+    margin-top: 0.5em;
+    border-radius: 0;
+    border-color: $base-color-light;
+    box-shadow: 1px 1px 1px #ccc;
+  }
+  .Select-control {
+    border: 0;
+  }
+}

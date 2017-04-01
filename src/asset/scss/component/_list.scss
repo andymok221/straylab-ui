@@ -1,0 +1,13 @@
+ol.list {
+  margin-left: 1em;
+  list-style-type: decimal;
+}
+.list {
+  &--highlight {
+    .list__item {
+      &:hover {
+        background: $base-color-light;
+      }
+    }
+  }
+}

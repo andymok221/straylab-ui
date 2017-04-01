@@ -1,0 +1,22 @@
+.pagination {
+  &__item {
+    display: inline-block;
+    margin-right: 0.5em;
+    cursor: pointer;
+    color: $base-color;
+    &:hover {
+      color: $base-color-dark;
+    }
+    &-- {
+      &active {
+        color: $base-color-dark;
+      }
+      &disabled {
+        cursor: default;
+        &:hover {
+          color: $base-color;
+        }
+      }
+    }
+  }
+}

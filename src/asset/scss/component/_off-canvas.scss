@@ -1,0 +1,13 @@
+.off-canvas {
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  left: -9999px;
+  height: 100%;
+  background: $oc-white;
+  padding: 1em;
+  transition: left ease-in 0.2s;
+  &--close {
+    transition: left ease-out 0.2s;
+  }
+}

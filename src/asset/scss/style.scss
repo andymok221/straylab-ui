@@ -1,0 +1,78 @@
+// external stylesheets
+@import "../../../node_modules/open-color/open-color";
+@import "../../../node_modules/flexboxgrid/css/flexboxgrid.min.css";
+@import "../../../node_modules/reset-css/reset";
+@import "../../../node_modules/react-select/dist/react-select.min.css";
+@import "variable";
+
+html, body {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+* {
+  box-sizing: border-box;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+button,
+input,
+select,
+textarea,
+div,
+span {
+  color: $base-color-darker;
+}
+
+// helper class
+.hidden {
+  display: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+body.modal-open {
+  height: 100%;
+  overflow: hidden;
+}
+
+// size control
+.sm {
+  padding: 0.5rem;
+  font-size: 1em;
+}
+.md {
+  padding: 0.6rem;
+  font-size: 1.4em;
+}
+.lg {
+  padding: 0.7rem;
+  font-size: 1.96em;
+}
+
+@import "./typography";
+
+// components
+@import "./component/button";
+@import "./component/checkbox";
+//@import "./component/form";
+@import "./component/input";
+@import "./component/label";
+//@import "./component/list";
+@import "./component/message";
+@import "./component/modal";
+@import "./component/off-canvas";
+//@import "./component/pagination";
+@import "./component/pie";
+@import "./component/progress";
+@import "./component/radio";
+@import "./component/select";
+@import "./component/table";
+@import "../../../node_modules/tether-tooltip/dist/css/tooltip-theme-arrows.css";

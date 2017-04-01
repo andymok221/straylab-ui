@@ -1,0 +1,29 @@
+.table {
+  &__{
+    &header {
+      border-bottom: 1px solid $base-color;
+      &-cell {
+        text-align: left;
+        font-size: 0.9em;
+        color: $base-color;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    &cell {
+      text-align: left;
+      padding: 1rem;
+    }
+  }
+  &--highlight-cell {
+    .table__cell:hover {
+      background: $base-color-lighter;
+    }
+  }
+  &--highlight-row {
+    .table__body .table__row:hover{
+      background: $base-color-lighter;
+    }
+  }
+}

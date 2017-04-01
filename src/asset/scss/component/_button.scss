@@ -1,0 +1,61 @@
+.button {
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  min-width: 120px;
+  cursor: pointer;
+  outline: none;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+  padding: 0.7rem 1em;
+  color: $oc-white;
+  background: $base-color;
+  &:hover {
+    background: $base-color-darker;
+  }
+  &:focus {
+    background: $base-color-darkest;
+  }
+  &--{
+    &primary {
+      background: $primary-color;
+      color: $oc-white;
+      &:hover {
+        background: $primary-color-darker;
+      }
+      &:focus {
+        background: $primary-color-darkest;
+      }
+    }
+    &secondary {
+      background: $secondary-color;
+      color: $oc-white;
+      &:hover {
+        background: $secondary-color-darker;
+      }
+      &:focus {
+        background: $secondary-color-darkest;
+      }
+    }
+    &color-red {
+      background: $red-color;
+      color: $oc-white;
+      &:hover {
+        background: $red-color-darker;
+      }
+      &:focus {
+        background: $red-color-darkest;
+      }
+    }
+    &sm {
+      @extend .sm;
+    }
+    &md {
+      @extend .md;
+    }
+    &lg {
+      @extend .lg;
+    }
+  }
+}

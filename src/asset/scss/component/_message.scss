@@ -1,0 +1,38 @@
+.message {
+  border-radius: 6px;
+  padding: 1rem;
+  background: $base-color-lightest;
+  color: $base-color-darker;
+  margin-bottom: 0.5em;
+  &__header {
+    font-weight: 700;
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    color: $base-color-darkest;
+  }
+  &-- {
+    &primary {
+      background: $primary-color-lightest;
+      color: $primary-color-darker;
+      .message__header {
+        color: $primary-color-darker;
+      }
+    }
+    &secondary {
+      background: $secondary-color-lightest;
+      color: $secondary-color-darker;
+      .message__header {
+        color: $secondary-color-darker;
+      }
+    }
+    &color- {
+      &red {
+        background: $red-color-lightest;
+        color: $red-color-darker;
+        .message__header {
+          color: $red-color-darkest;
+        }
+      }
+    }
+  }
+}

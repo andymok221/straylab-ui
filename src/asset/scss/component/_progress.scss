@@ -1,0 +1,38 @@
+.progress {
+  height: 8px;
+  border-radius: 3px;
+  background: $base-color-lightest;
+  overflow: hidden;
+  &__bar {
+    height: 100%;
+    background: $base-color;
+  }
+  &-- {
+    &primary {
+      background: $primary-color-lightest;
+      .progress__bar {
+        background: $primary-color;
+      }
+    }
+    &secondary {
+      background: $secondary-color-lightest;
+      .progress__bar {
+        background: $secondary-color;
+      }
+    }
+    &color-- {
+      &red {
+        background: $red-color-lightest;
+        .progress__bar {
+          background: $red-color;
+        }
+      }
+    }
+    &md {
+      height: 14px;
+    }
+    &lg {
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.pie {
+  position: relative;
+  clip: rect(auto auto auto auto);
+  &__left-half,
+  &__right-half,
+  &__right-half-empty{
+    position: absolute;
+    border: 3px solid $base-color;
+    border-radius: 50%;
+  }
+  &__right-half-empty{
+    border-color: $base-color-lighter;
+  }
+  &__base {
+    border: 3px solid $base-color-lightest;
+    border-radius: 50%;
+  }
+  &-- {
+    &primary {
+      .pie__base {
+        border: 3px solid $primary-color-lightest;
+      }
+      .pie__left-half,
+      .pie__right-half {
+        border-color: $primary-color;
+      }
+    }
+    &secondary {
+      .pie__base {
+        border: 3px solid $secondary-color-lightest;
+      }
+      .pie__left-half,
+      .pie__right-half {
+        border-color: $secondary-color;
+      }
+    }
+    &color- {
+      &red {
+        .pie__base {
+          border: 3px solid $red-color-lightest;
+        }
+        .pie__left-half,
+        .pie__right-half {
+          border-color: $red-color;
+        }
+      }
+    }
+  }
+}

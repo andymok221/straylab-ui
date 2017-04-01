@@ -1,0 +1,32 @@
+.label {
+  display: inline-block;
+  border-radius: 3px;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  color: $base-color-darker;
+  &-- {
+    &primary {
+      color: $primary-color-darker;
+    }
+    &secondary {
+      color: $secondary-color-darker;
+    }
+    &color- {
+      &red {
+        color: $red-color-darker;
+      }
+    }
+    &sm {
+      @extend .sm;
+      padding: 0;
+    }
+    &md {
+      @extend .md;
+      padding: 0;
+    }
+    &lg {
+      @extend .lg;
+      padding: 0;
+    }
+  }
+}

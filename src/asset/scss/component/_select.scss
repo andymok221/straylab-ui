@@ -1,0 +1,24 @@
+.Select {
+  margin-bottom: 0.5em;
+}
+.Select-placeholder {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Select-input {
+  padding-left: 10px;
+  padding-right: 10px;
+  > input {
+    padding: 0;
+    line-height: 34px;
+  }
+}
+.Select-control {
+  border: 1px solid $base-color-lighter;
+}
+
+.is-focused:not(.is-open) > .Select-control {
+  border: 1px solid $base-color-darker;
+  box-shadow: none;
+}

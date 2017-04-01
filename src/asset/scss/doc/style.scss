@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Code+Pro');
+@import "../../../../node_modules/open-color/open-color";
+$navbar-width: 160px;
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+.docs-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 0;
+}
+hr {
+  height: 1px;
+  background: $oc-gray-5;
+  border: 0;
+  margin: 1rem 0;
+}
+.navbar {
+  width: $navbar-width;
+  padding: 0 2rem;
+  background: #f1f3f5;
+  box-shadow: inset -3px 0px 6px 0px rgba(218, 218, 218, 0.2);
+  &::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc((100% - 960px) / 2 + 150px);
+    height: 100%;
+    background: $oc-gray-1;
+    z-index: 1;
+  }
+  position: fixed;
+  height: 100%;
+  top: 0;
+  &__logo {
+    color: $oc-blue-8;
+    position: relative;
+    padding-top: 1.5rem;
+    font-weight: 700;
+    font-size: 2em;
+    height: 80px;
+    z-index: 65536;
+  }
+  &__list {
+    position: relative;
+    padding-left: 0.3em;
+    padding-right: 1em;
+    > li {
+      font-size: 1.2em;
+      margin-bottom: 0.8em;
+      a {
+        color: $oc-gray-6;
+        text-decoration: none;
+        &.active, &:hover {
+          color: $oc-gray-9;
+        }
+      }
+    }
+    z-index: 65536;
+  }
+}
+.main-content {
+  margin-left: $navbar-width;
+  padding: 0 4em;
+  margin-top: 80px;
+  &__doc {
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1em;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 2em;
+    }
+    h3 {
+      font-size: 1.4em;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.618em;
+      margin-bottom: 2.2rem;
+    }
+    .message, .pie, .Select, .progress {
+      margin-top: 1rem;
+      margin-bottom: 2.2rem;
+    }
+    pre {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 1.1em;
+      line-height: 1.618;
+      padding: 1em !important;
+      box-shadow: 1px 1px 5px 0px rgba(201, 201, 201, 0.64);
+    }
+    pre + p {
+      margin-top: 1rem;
+    }
+    pre + h2 {
+      margin-top: 2rem;
+    }
+    strong {
+      font-weight: 700;
+    }
+    code.inline {
+      background: $oc-gray-2;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    input[type="text"] {
+      max-width: 200px;
+    }
+    .table {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+}
