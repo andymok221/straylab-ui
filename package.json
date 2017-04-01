@@ -5,7 +5,9 @@
   "main": "./dist/app.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --history-api-fallback --open",
-    "build": "BABEL_ENV=production webpack --config webpack.config.prod.js --progress",
+    "build-ui": "BABEL_ENV=production webpack --config webpack.config.prod.js --progress",
+    "build-doc": "BABEL_ENV=production webpack --config webpack.config.doc.js --progress",
+    "build-all": "npm run build-doc && npm run build-doc",
     "test": "./node_modules/.bin/eslint ./src/component --ext js --ext jsx --quiet"
   },
   "author": "Andy Mok",
