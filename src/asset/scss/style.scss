@@ -46,15 +46,15 @@ body.modal-open {
 // size control
 .sm {
   padding: 0.5rem;
-  font-size: 1em;
+  font-size: 1rem;
 }
 .md {
   padding: 0.6rem;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 .lg {
   padding: 0.7rem;
-  font-size: 1.96em;
+  font-size: 1.96rem;
 }
 
 @import "./typography";
@@ -62,7 +62,7 @@ body.modal-open {
 // components
 @import "./component/button";
 @import "./component/checkbox";
-//@import "./component/form";
+@import "./component/form";
 @import "./component/input";
 @import "./component/label";
 //@import "./component/list";

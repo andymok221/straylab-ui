@@ -81,7 +81,7 @@ hr {
       line-height: 1.618em;
       margin-bottom: 2.2rem;
     }
-    .message, .pie, .Select, .progress {
+    .message, .pie, > .Select, .progress, > .form {
       margin-top: 1rem;
       margin-bottom: 2.2rem;
     }

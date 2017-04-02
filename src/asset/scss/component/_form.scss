@@ -1,11 +1,20 @@
-.form {
-  padding: 0.5em;
-}
 .form-group {
   padding: 0.8em;
   border-radius: 3px;
-  border: 1px solid $base-color-light;
+  border: 1px solid $base-color-lighter;
   margin-bottom: 0.5em;
+  &--state {
+    &-error {
+      border: 1px solid $red-color-lighter;
+      background-color: $red-color-lightest;
+    }
+    &-focus {
+      border: 1px solid $base-color-darker;
+    }
+    &-disabled {
+      background-color: $base-color-lightest;
+    }
+  }
   > label:not(.radio-control):not(.checkbox-control) {
     font-size: 0.8em;
     text-transform: uppercase;
@@ -15,15 +24,19 @@
   }
   input[type="text"],
   input[type="number"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="tel"],
+  input[type="email"] {
+    height: 19px;
     border: 0;
     width: 100%;
     padding: 0;
     margin: 0;
+    background: none;
   }
   .Select {
+    position: relative;
     margin: 0 -0.8rem;
-    padding-top: 1px;
   }
   .Select-control {
     height: auto;
@@ -31,23 +44,45 @@
   .Select-input {
     height: auto;
     input {
-      padding: 0 0 0 0.3rem;
+      line-height: 19px;
     }
   }
   .Select-control:hover {
     box-shadow: none;
   }
   .Select-placeholder {
-    line-height: 1em;
-    padding-left: 0.8rem;
+    line-height: 19px;
   }
   .Select-menu-outer {
+    // dirty hack
+    left: -1px;
+    width: calc(100% + 2px);
     margin-top: 0.5em;
     border-radius: 0;
-    border-color: $base-color-light;
-    box-shadow: 1px 1px 1px #ccc;
+    border-color: $base-color-lighter;
   }
   .Select-control {
     border: 0;
+    background: none;
+  }
+  // reset styles from react-select
+  .is-focused:not(.is-open) > .Select-control {
+    border: 0;
+  }
+  .select {
+    &--state {
+      &-error {
+        .Select-control {
+          border: 0;
+          background: none;
+        }
+      }
+      &-disabled {
+        .Select-control {
+          border: 0;
+          background: none;
+        }
+      }
+    }
   }
 }
