@@ -22,3 +22,20 @@
   border: 1px solid $base-color-darker;
   box-shadow: none;
 }
+
+.select {
+  &--state {
+    &-error {
+      .Select-control {
+        border: 1px solid $red-color-lighter;
+        background-color: $red-color-lightest;
+      }
+    }
+    &-disabled {
+      .Select-control {
+        border: 1px solid $base-color-lighter;
+        background-color: $base-color-lightest !important;
+      }
+    }
+  }
+}

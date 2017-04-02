@@ -25,13 +25,30 @@ class SelectDoc extends Component {
         <SyntaxHighlighter language="javascript" style={github}>{`import { Select } from 'straylab-ui';`}</SyntaxHighlighter>
         <h2>Props</h2>
         <p>Please refer to react-select <a href="https://github.com/JedWatson/react-select">documentation.</a></p>
-        <h2>Default</h2>
+        <h2>State</h2>
+        <h3>Default</h3>
         <SyntaxHighlighter language="html" style={github}>{`<Select
     value={this.state.value}
     onChange={(value) => {this.setState({ value })}}
     options={options}
 />`}</SyntaxHighlighter>
-          <Select value={this.state.value} onChange={(value) => {this.setState({ value })}} options={options} />
+        <Select value={this.state.value} onChange={(value) => {this.setState({ value })}} options={options} />
+        <h3>Error</h3>
+        <SyntaxHighlighter language="html" style={github}>{`<Select
+    error
+    value={this.state.value}
+    onChange={(value) => {this.setState({ value })}}
+    options={options}
+/>`}</SyntaxHighlighter>
+        <Select error value={this.state.value} onChange={(value) => {this.setState({ value })}} options={options} />
+        <h3>Disabled</h3>
+        <SyntaxHighlighter language="html" style={github}>{`<Select
+    disabled
+    value={this.state.value}
+    onChange={(value) => {this.setState({ value })}}
+    options={options}
+/>`}</SyntaxHighlighter>
+        <Select disabled value={this.state.value} onChange={(value) => {this.setState({ value })}} options={options} />
       </div>
     );
   }
