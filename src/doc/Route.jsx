@@ -7,6 +7,7 @@ import {
 import Home from './page/Home';
 import ButtonDoc from './page/ButtonDoc';
 import CheckboxDoc from './page/CheckboxDoc';
+import FormDoc from './page/FormDoc';
 import InputDoc from './page/InputDoc';
 import LabelDoc from './page/LabelDoc';
 import MessageDoc from './page/MessageDoc';
@@ -39,6 +40,7 @@ class Routes extends Component {
               <hr />
               <li><Link activeClassName="active" to="/button">Button</Link></li>
               <li><Link activeClassName="active" to="/checkbox">Checkbox</Link></li>
+              <li><Link activeClassName="active" to="/form">Form</Link></li>
               <li><Link activeClassName="active" to="/input">Input</Link></li>
               <li><Link activeClassName="active" to="/label">Label</Link></li>
               <li><Link activeClassName="active" to="/message">Message</Link></li>
@@ -56,6 +58,7 @@ class Routes extends Component {
             <Route exact path="/" component={Home}/>
             <Route exact path="/button" component={ButtonDoc}/>
             <Route exact path="/checkbox" component={CheckboxDoc}/>
+            <Route exact path="/form" component={FormDoc}/>
             <Route exact path="/input" component={InputDoc}/>
             <Route exact path="/label" component={LabelDoc}/>
             <Route exact path="/message" component={MessageDoc}/>
