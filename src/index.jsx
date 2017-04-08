@@ -1,4 +1,4 @@
-export { default as Button } from './component/Button';
+export { default as Button } from './component/Button/Button';
 export { default as Checkbox }  from './component/Checkbox';
 export { default as Form }  from './component/Form/Form';
 export { default as Grid }  from './component/Grid';

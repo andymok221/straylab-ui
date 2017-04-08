@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ButtonGroup from './ButtonGroup';
 
 class Button extends Component {
   render() {
@@ -54,5 +55,7 @@ Button.defaultProps = {
   type: undefined,
   onClick: undefined
 };
+
+Button.Group = ButtonGroup;
 
 export default Button;

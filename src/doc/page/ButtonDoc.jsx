@@ -138,7 +138,14 @@ class ButtonDoc extends Component {
           <Button size="lg" primary>large</Button>
         </p>
         <h2>Button Group</h2>
-        <p>Work In Progress...</p>
+        <SyntaxHighlighter language="html" style={github}>{`<Button.Group>
+  <Button primary>default</Button>
+  <Button primary>default</Button>
+</Button.Group>`}</SyntaxHighlighter>
+        <Button.Group>
+          <Button primary>default</Button>
+          <Button primary>default</Button>
+        </Button.Group>
       </div>
     );
   }
