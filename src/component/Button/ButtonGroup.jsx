@@ -16,7 +16,8 @@ class ButtonGroup extends Component {
 }
 
 ButtonGroup.propTypes = {
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
+  children: React.PropTypes.node.isRequired
 };
 
 ButtonGroup.defaultProps = {

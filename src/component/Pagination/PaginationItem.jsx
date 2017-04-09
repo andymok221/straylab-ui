@@ -20,4 +20,17 @@ class PaginationItem extends Component {
   }
 }
 
+PaginationItem.propTypes = {
+  active: React.PropTypes.bool,
+  disabled: React.PropTypes.bool,
+  className: React.PropTypes.string,
+  children: React.PropTypes.node.isRequired
+};
+
+PaginationItem.defaultProps = {
+  active: false,
+  disabled: false,
+  className: ''
+};
+
 export default PaginationItem;
