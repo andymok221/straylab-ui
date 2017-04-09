@@ -13,6 +13,7 @@ import LabelDoc from './page/LabelDoc';
 import MessageDoc from './page/MessageDoc';
 import ModalDoc from './page/ModalDoc';
 import OffCanvasDoc from './page/OffCanvasDoc';
+import PaginationDoc from './page/PaginationDoc';
 import PieDoc from './page/PieDoc';
 import ProgressDoc from './page/ProgressDoc';
 import RadioDoc from './page/RadioDoc';
@@ -46,6 +47,7 @@ class Routes extends Component {
               <li><Link activeClassName="active" to="/message">Message</Link></li>
               <li><Link activeClassName="active" to="/modal">Modal</Link></li>
               <li><Link activeClassName="active" to="/off-canvas">Off Canvas</Link></li>
+              <li><Link activeClassName="active" to="/pagination">Pagination</Link></li>
               <li><Link activeClassName="active" to="/pie">Pie</Link></li>
               <li><Link activeClassName="active" to="/progress">Progress</Link></li>
               <li><Link activeClassName="active" to="/radio">Radio</Link></li>
@@ -64,6 +66,7 @@ class Routes extends Component {
             <Route exact path="/message" component={MessageDoc}/>
             <Route exact path="/modal" component={ModalDoc}/>
             <Route exact path="/off-canvas" component={OffCanvasDoc}/>
+            <Route exact path="/pagination" component={PaginationDoc}/>
             <Route exact path="/pie" component={PieDoc}/>
             <Route exact path="/progress" component={ProgressDoc}/>
             <Route exact path="/radio" component={RadioDoc}/>

@@ -5,11 +5,12 @@
     cursor: pointer;
     color: $base-color;
     &:hover {
-      color: $base-color-dark;
+      color: $base-color-darker;
     }
     &-- {
       &active {
-        color: $base-color-dark;
+        cursor: default;
+        color: $base-color-darker;
       }
       &disabled {
         cursor: default;

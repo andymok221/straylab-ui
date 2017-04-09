@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PaginationItem from './PaginationItem';
 
-const Pagination = ({
-  className = '',
-  children
-}) => {
-  const finalClassName = `pagination ${className}`.trim();
-  return (
-    <ul
-      className={finalClassName}
-    >
-      {children}
-    </ul>
-  );
+class Pagination extends Component {
+  render() {
+    const {
+      className,
+      children
+    } = this.props;
+    const finalClassName = `pagination ${className}`.trim();
+    return (
+      <ul
+        className={finalClassName}
+      >
+        {children}
+      </ul>
+    );
+  }
+}
+
+Pagination.propTypes = {
+  className: React.PropTypes.string,
+  children: React.PropTypes.node.isRequired
+};
+
+Pagination.defaultProps = {
+  className: ''
 };
 
 Pagination.Item = PaginationItem;
