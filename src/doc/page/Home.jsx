@@ -19,6 +19,11 @@ class Home extends Component {
         <p>It is recommended that instead directly using the framework, you can customize the framework to build your own one.</p>
         <h2>Contribution</h2>
         <p>You are welcomed to provide contribution by making a pull request or an issue.</p>
+        <h2>Sponsored By</h2>
+        <p>
+          <h3><a target="_blank" href="https://www.browserstack.com/">BrowserStack</a></h3>
+          <img width="300" src="/dist/bs.svg" />
+        </p>
       </div>
     );
   }
