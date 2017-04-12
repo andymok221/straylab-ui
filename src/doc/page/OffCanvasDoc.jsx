@@ -42,7 +42,7 @@ class OffCanvasDoc extends Component {
           <Table.Body>
           </Table.Body>
         </Table>
-        <h2>Size</h2>
+        <h2>Demo</h2>
         <SyntaxHighlighter language="html" style={github}>{`<OffCanvas
   open={this.state.offCanvas}
   onClose={() => this.setState({ offCanvas: false })}

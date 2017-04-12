@@ -9,6 +9,9 @@ html, body {
   margin: auto;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 hr {
   height: 1px;
   background: $oc-gray-5;
@@ -106,7 +109,7 @@ hr {
       padding: 2px 6px;
       border-radius: 3px;
     }
-    input[type="text"] {
+    p > input[type="text"] {
       max-width: 200px;
     }
     .table {
