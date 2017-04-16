@@ -3,15 +3,18 @@
 @import "../../../node_modules/flexboxgrid/css/flexboxgrid.min.css";
 @import "../../../node_modules/reset-css/reset";
 @import "../../../node_modules/react-select/dist/react-select.min.css";
+@import "../../../node_modules/tether-tooltip/dist/css/tooltip-theme-arrows.css";
 @import "variable";
 
 html, body {
   font-family: $font-family;
   font-size: $font-size;
 }
+
 * {
   box-sizing: border-box;
 }
+
 p,
 h1,
 h2,
@@ -27,15 +30,6 @@ textarea,
 div,
 span {
   color: $base-color-darker;
-}
-
-// helper class
-.hidden {
-  display: none;
-}
-
-.full-width {
-  width: 100%;
 }
 
 body.modal-open {
@@ -57,7 +51,8 @@ body.modal-open {
   font-size: 1.96rem;
 }
 
-@import "./typography";
+@import "typography";
+@import "helper";
 
 // components
 @import "./component/button";
@@ -75,4 +70,3 @@ body.modal-open {
 @import "./component/radio";
 @import "./component/select";
 @import "./component/table";
-@import "../../../node_modules/tether-tooltip/dist/css/tooltip-theme-arrows.css";

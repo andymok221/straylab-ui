@@ -16,7 +16,7 @@ class Table extends Component {
     } = this.props;
     let extraClass = '';
     if (highlight) {
-      extraClass = `table--highlight`;
+      extraClass = 'table--highlight';
     }
     const finalClassName = `table ${extraClass} ${className}`.trim();
     return (
