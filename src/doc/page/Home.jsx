@@ -15,7 +15,7 @@ class Home extends Component {
         </p>
         <h2>CSS</h2>
         <p>CSS can be found in the <code>dist</code> folder. CDN link will be provided soon once available.</p>
-        <h2>Recommend usage</h2>
+        <h2>Recommended usage</h2>
         <p>It is recommended that instead directly using the framework, you can customize the framework to build your own one.</p>
         <h2>Contribution</h2>
         <p>You are welcomed to provide contribution by making a pull request or an issue.</p>

@@ -29,10 +29,7 @@ GridColumn.propTypes = {
   sm: React.PropTypes.number,
   md: React.PropTypes.number,
   lg: React.PropTypes.number,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
-  ]).isRequired,
+  children: React.PropTypes.node.isRequired,
   className: React.PropTypes.string
 };
 
