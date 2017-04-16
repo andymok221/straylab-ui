@@ -17,11 +17,12 @@ class TableHeaderCell extends Component {
 
 TableHeaderCell.propTypes = {
   className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired
+  children: React.PropTypes.node
 };
 
 TableHeaderCell.defaultProps = {
-  className: ''
+  className: '',
+  children: ''
 };
 
 export default TableHeaderCell;

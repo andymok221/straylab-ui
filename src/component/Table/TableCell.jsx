@@ -17,11 +17,12 @@ class TableCell extends Component {
 
 TableCell.propTypes = {
   className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired
+  children: React.PropTypes.node
 };
 
 TableCell.defaultProps = {
-  className: ''
+  className: '',
+  children: ''
 };
 
 export default TableCell;

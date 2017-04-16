@@ -16,14 +16,9 @@
       padding: 1rem;
     }
   }
-  &--highlight-cell {
-    .table__cell:hover {
-      background: $base-color-lighter;
-    }
-  }
-  &--highlight-row {
+  &--highlight {
     .table__body .table__row:hover{
-      background: $base-color-lighter;
+      background: $base-color-lightest;
     }
   }
 }

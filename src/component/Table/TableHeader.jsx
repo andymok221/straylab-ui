@@ -17,11 +17,12 @@ class TableHeader extends Component {
 
 TableHeader.propTypes = {
   className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired
+  children: React.PropTypes.node
 };
 
 TableHeader.defaultProps = {
-  className: ''
+  className: '',
+  children: ''
 };
 
 export default TableHeader;

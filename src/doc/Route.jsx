@@ -18,6 +18,7 @@ import PieDoc from './page/PieDoc';
 import ProgressDoc from './page/ProgressDoc';
 import RadioDoc from './page/RadioDoc';
 import SelectDoc from './page/SelectDoc';
+import TableDoc from './page/TableDoc';
 import TooltipDoc from './page/TooltipDoc';
 
 class Routes extends Component {
@@ -52,6 +53,7 @@ class Routes extends Component {
               <li><Link activeClassName="active" to="/progress">Progress</Link></li>
               <li><Link activeClassName="active" to="/radio">Radio</Link></li>
               <li><Link activeClassName="active" to="/select">Select</Link></li>
+              <li><Link activeClassName="active" to="/table">Table</Link></li>
               <li><Link activeClassName="active" to="/tooltip">Tooltip</Link></li>
             </ul>
           </div>
@@ -71,6 +73,7 @@ class Routes extends Component {
             <Route exact path="/progress" component={ProgressDoc}/>
             <Route exact path="/radio" component={RadioDoc}/>
             <Route exact path="/select" component={SelectDoc}/>
+            <Route exact path="/table" component={TableDoc}/>
             <Route exact path="/tooltip" component={TooltipDoc}/>
           </div>
         </div>
