@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Switch,
   BrowserRouter,
   Route,
   NavLink as Link
@@ -59,22 +60,24 @@ class Routes extends Component {
           </div>
           <div className="main-content">
             <div className="main-content__header" />
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/button" component={ButtonDoc}/>
-            <Route exact path="/checkbox" component={CheckboxDoc}/>
-            <Route exact path="/form" component={FormDoc}/>
-            <Route exact path="/input" component={InputDoc}/>
-            <Route exact path="/label" component={LabelDoc}/>
-            <Route exact path="/message" component={MessageDoc}/>
-            <Route exact path="/modal" component={ModalDoc}/>
-            <Route exact path="/off-canvas" component={OffCanvasDoc}/>
-            <Route exact path="/pagination" component={PaginationDoc}/>
-            <Route exact path="/pie" component={PieDoc}/>
-            <Route exact path="/progress" component={ProgressDoc}/>
-            <Route exact path="/radio" component={RadioDoc}/>
-            <Route exact path="/select" component={SelectDoc}/>
-            <Route exact path="/table" component={TableDoc}/>
-            <Route exact path="/tooltip" component={TooltipDoc}/>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/button" component={ButtonDoc}/>
+              <Route exact path="/checkbox" component={CheckboxDoc}/>
+              <Route exact path="/form" component={FormDoc}/>
+              <Route exact path="/input" component={InputDoc}/>
+              <Route exact path="/label" component={LabelDoc}/>
+              <Route exact path="/message" component={MessageDoc}/>
+              <Route exact path="/modal" component={ModalDoc}/>
+              <Route exact path="/off-canvas" component={OffCanvasDoc}/>
+              <Route exact path="/pagination" component={PaginationDoc}/>
+              <Route exact path="/pie" component={PieDoc}/>
+              <Route exact path="/progress" component={ProgressDoc}/>
+              <Route exact path="/radio" component={RadioDoc}/>
+              <Route exact path="/select" component={SelectDoc}/>
+              <Route exact path="/table" component={TableDoc}/>
+              <Route exact path="/tooltip" component={TooltipDoc}/>
+            </Switch>
           </div>
         </div>
       </BrowserRouter>
