@@ -42,6 +42,42 @@ class MessageDoc extends Component {
             </Table.Row>
           </Table.Header>
           <Table.Body>
+            <Table.Row>
+              <Table.Cell>
+                size
+              </Table.Cell>
+              <Table.Cell><code>open</code></Table.Cell>
+              <Table.Cell>
+                String
+              </Table.Cell>
+              <Table.Cell>
+                The size of the modal
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                open*
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                Boolean
+              </Table.Cell>
+              <Table.Cell>
+                Whether the off canvas is shown
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                onClose*
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                Function
+              </Table.Cell>
+              <Table.Cell>
+                Function to be called when closing
+              </Table.Cell>
+            </Table.Row>
           </Table.Body>
         </Table>
         <h2>Size</h2>

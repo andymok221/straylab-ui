@@ -12,7 +12,6 @@ class OffCanvas extends Component {
     document.removeEventListener('click', this.onClick);
   }
   onClick(event) {
-    console.log(this.wrapper.getBoundingClientRect());
     if (!this.wrapper.contains(event.target) && this.wrapper.getBoundingClientRect().left === 0) this.props.onClose();
   }
   render() {

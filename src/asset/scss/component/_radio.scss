@@ -36,6 +36,9 @@
     background: $base-color-darker;
     content: " ";
   }
+  input:disabled~.radio-control__indicator {
+    background: $base-color-lightest;
+  }
   > label {
     margin-left: 1.5em;
   }
@@ -83,7 +86,7 @@
     }
     &primary {
       .radio-control__indicator {
-        background: $primary-color-lighter;
+        background: $secondary-color;
       }
       input:checked~span::before {
         background: $primary-color-darker;

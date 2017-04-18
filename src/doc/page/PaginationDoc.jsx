@@ -33,6 +33,18 @@ class PaginationDoc extends Component {
             </Table.Row>
           </Table.Header>
           <Table.Body>
+            <Table.Row>
+              <Table.Cell>
+                className
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                String
+              </Table.Cell>
+              <Table.Cell>
+                Custom class to be added to input field
+              </Table.Cell>
+            </Table.Row>
           </Table.Body>
         </Table>
         <h2>State</h2>

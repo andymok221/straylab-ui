@@ -53,7 +53,7 @@ class ProgressDoc extends Component {
           </Table.Body>
         </Table>
         <h2>Highlight</h2>
-        <SyntaxHighlighter language="html" style={github}>{`<Table>
+        <SyntaxHighlighter language="html" style={github}>{`<Table highlight>
   <Table.Header>
     <Table.Row>
       <Table.HeaderCell>Header1</Table.HeaderCell>
