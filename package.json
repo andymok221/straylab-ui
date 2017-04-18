@@ -1,6 +1,6 @@
 {
   "name": "straylab-ui",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "UI framework from the power of OSS",
   "main": "./dist/app.js",
   "scripts": {

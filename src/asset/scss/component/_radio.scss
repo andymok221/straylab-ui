@@ -86,7 +86,7 @@
     }
     &primary {
       .radio-control__indicator {
-        background: $secondary-color;
+        background: $primary-color-lighter;
       }
       input:checked~span::before {
         background: $primary-color-darker;
