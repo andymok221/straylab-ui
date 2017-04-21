@@ -41,8 +41,8 @@ class Modal extends Component {
   render() {
     const {
       open,
-      size = 'sm',
-      className = '',
+      size,
+      className,
       children
     } = this.props;
     if (open) {

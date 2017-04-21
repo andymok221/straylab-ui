@@ -6,6 +6,7 @@ class PaginationItem extends Component {
       className = '',
       active,
       disabled,
+      onClick,
       children
     } = this.props;
     let state = '';
@@ -13,7 +14,7 @@ class PaginationItem extends Component {
     if (disabled) state = 'pagination__item--disabled';
     const finalClassName = `pagination__item ${className} ${state}`.trim();
     return (
-      <li className={finalClassName}>
+      <li onClick={onClick} className={finalClassName}>
         {children}
       </li>
     );
@@ -23,6 +24,7 @@ class PaginationItem extends Component {
 PaginationItem.propTypes = {
   active: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
+  onClick: React.PropTypes.func,
   className: React.PropTypes.string,
   children: React.PropTypes.node.isRequired
 };
@@ -30,6 +32,7 @@ PaginationItem.propTypes = {
 PaginationItem.defaultProps = {
   active: false,
   disabled: false,
+  onClick: undefined,
   className: ''
 };
 

@@ -14,15 +14,12 @@ const GridRow = ({
 
 GridRow.propTypes = {
   className: React.PropTypes.string,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.node,
-    React.PropTypes.element,
-  ]).isRequired
+  children: React.PropTypes.node
 };
 
 GridRow.defaultProps = {
-  className: ''
+  className: '',
+  children: ''
 };
 
 export default GridRow;

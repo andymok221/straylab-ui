@@ -16,7 +16,7 @@ class OffCanvas extends Component {
   }
   render() {
     const {
-      className = '',
+      className,
       children
     } = this.props;
     let style = {};
