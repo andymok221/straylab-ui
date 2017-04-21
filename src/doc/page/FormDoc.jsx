@@ -37,6 +37,90 @@ class FormDoc extends Component {
             </Table.Row>
           </Table.Header>
           <Table.Body>
+            <Table.Row>
+              <Table.Cell>
+                id
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                String
+              </Table.Cell>
+              <Table.Cell>
+                The id of the form
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                name
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                String
+              </Table.Cell>
+              <Table.Cell>
+                The name of the form
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                action
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                String
+              </Table.Cell>
+              <Table.Cell>
+                The action of the form
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                method
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                String
+              </Table.Cell>
+              <Table.Cell>
+                The method of the form
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                className
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                String
+              </Table.Cell>
+              <Table.Cell>
+                Custom class to be added to the form
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                onSubmit
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                Function
+              </Table.Cell>
+              <Table.Cell>
+                Function to be called when submitting the form
+              </Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>
+                onChange
+              </Table.Cell>
+              <Table.Cell />
+              <Table.Cell>
+                Function
+              </Table.Cell>
+              <Table.Cell>
+                Function to be called when there are changes of the form
+              </Table.Cell>
+            </Table.Row>
           </Table.Body>
         </Table>
         <h2>Form Group</h2>
