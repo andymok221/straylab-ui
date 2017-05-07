@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import className from 'classnames';
 
 class Pane extends Component {
+  static getType() {
+    return 'Pane';
+  }
   render() {
     const {
       children,

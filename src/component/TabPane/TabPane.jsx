@@ -26,14 +26,14 @@ class TabPane extends Component {
       <div>
         <ul className="tab-pane">
           {React.Children.map(children, (child) => {
-            if (child.type.displayName === 'Tab') {
+            if (child.type.getType() === 'Tab') {
               return React.cloneElement(child, { setActive: this.setActive, activeTab: this.state.activeTab });
             }
             return null;
           })}
         </ul>
         {React.Children.map(children, (child) => {
-          if (child.type.displayName === 'Pane') {
+          if (child.type.getType() === 'Pane') {
             return React.cloneElement(child, { activeTab: this.state.activeTab });
           }
           return null;

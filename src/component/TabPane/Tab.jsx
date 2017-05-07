@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import className from 'classnames';
 
 class Tab extends Component {
+  static getType() {
+    return 'Tab';
+  }
   render() {
     const {
       children,
