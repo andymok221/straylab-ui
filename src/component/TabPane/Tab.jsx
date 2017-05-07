@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import className from 'classnames';
+import classNames from 'classnames';
 
 class Tab extends Component {
   static getType() {
@@ -10,10 +10,20 @@ class Tab extends Component {
       children,
       tab,
       activeTab,
-      setActive
+      setActive,
+      className,
+      disabled
     } = this.props;
+    let disabledState = '';
+    if (disabled) disabledState = 'tab-pane__tab--disabled';
+    const finalClassName = `tab-pane__tab ${disabledState} ${className}`.trim();
+    if (disabled) {
+      return (
+        <li className={classNames(finalClassName, { active: activeTab === tab })}>{children}</li>
+      );
+    }
     return (
-      <li onClick={setActive(tab)} className={className('tab-pane__tab', { active: activeTab === tab })}>{children}</li>
+      <li onClick={setActive(tab)} className={classNames(finalClassName, { active: activeTab === tab })}>{children}</li>
     );
   }
 }
@@ -21,13 +31,17 @@ class Tab extends Component {
 Tab.propTypes = {
   children: React.PropTypes.node.isRequired,
   tab: React.PropTypes.string.isRequired,
+  disabled: React.PropTypes.bool,
   activeTab: React.PropTypes.string,
-  setActive: React.PropTypes.func
+  setActive: React.PropTypes.func,
+  className: React.PropTypes.string
 };
 
 Tab.defaultProps = {
   activeTab: undefined,
-  setActive: undefined
+  disabled: false,
+  setActive: undefined,
+  className: ''
 };
 
 export default Tab;

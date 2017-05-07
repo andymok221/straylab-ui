@@ -11,9 +11,8 @@ class TabPane extends Component {
     this.setActive = this.setActive.bind(this);
   }
   setActive(tab) {
-    const self = this;
-    return function () {
-      self.setState({
+    return () => {
+      this.setState({
         activeTab: tab
       });
     };
@@ -21,9 +20,11 @@ class TabPane extends Component {
   render() {
     const {
       children,
+      className
     } = this.props;
+    const finalClassName = `tab-pane ${className}`.trim();
     return (
-      <div className="tab-pane">
+      <div className={finalClassName}>
         <ul className="tab-pane__tabs">
           {React.Children.map(children, (child) => {
             if (child.type.getType() === 'Tab') {
@@ -45,11 +46,13 @@ class TabPane extends Component {
 
 TabPane.propTypes = {
   children: React.PropTypes.node.isRequired,
-  defaultActiveTab: React.PropTypes.string
+  defaultActiveTab: React.PropTypes.string,
+  className: React.PropTypes.string
 };
 
 TabPane.defaultProps = {
-  defaultActiveTab: undefined
+  defaultActiveTab: undefined,
+  className: ''
 };
 
 TabPane.Tab = Tab;

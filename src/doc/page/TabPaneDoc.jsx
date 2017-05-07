@@ -15,12 +15,15 @@ class TabPaneDoc extends Component {
         <h2>Usage</h2>
         <SyntaxHighlighter language="javascript" style={github}>{`import { Modal } from 'straylab-ui';`}</SyntaxHighlighter>
         <h2>Props</h2>
-        <TabPane defaultActiveTab="two">
+        <TabPane className="basic" defaultActiveTab="two">
           <TabPane.Tab tab="one">
             Tab 1
           </TabPane.Tab>
           <TabPane.Tab tab="two">
             Tab 2
+          </TabPane.Tab>
+          <TabPane.Tab disabled tab="disabled">
+            Disabled
           </TabPane.Tab>
           <TabPane.Pane tab="one">
             Tab 1
