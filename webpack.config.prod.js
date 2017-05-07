@@ -8,6 +8,11 @@ module.exports = {
       './src/index'
     ]
   },
+  externals: {
+    'react': 'commonjs react',
+    'react-dom' : 'commonjs react-dom',
+    'react-select' : 'commonjs react-select'
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
