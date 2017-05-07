@@ -1,6 +1,6 @@
 {
   "name": "straylab-ui",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "UI framework from the power of OSS",
   "main": "./dist/app.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "url": "git+https://github.com/frmok/straylab-ui.git"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "flexboxgrid": "^6.3.1",
     "open-color": "^1.5.1",
     "reset-css": "^2.2.0",

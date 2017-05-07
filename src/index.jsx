@@ -1,3 +1,5 @@
+import './asset/scss/style.scss';
+
 export { default as Button } from './component/Button/Button';
 export { default as Checkbox }  from './component/Checkbox';
 export { default as Form }  from './component/Form/Form';
@@ -14,5 +16,5 @@ export { default as Progress }  from './component/Progress';
 export { default as Radio }  from './component/Radio';
 export { default as Select }  from './component/Select';
 export { default as Table }  from './component/Table/Table';
+export { default as TabPane }  from './component/TabPane/TabPane';
 export { default as Tooltip }  from './component/Tooltip';
-import './asset/scss/style.scss';

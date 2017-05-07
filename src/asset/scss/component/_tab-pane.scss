@@ -1,0 +1,28 @@
+.tab-pane {
+  width: 100%;
+  border-bottom: 1px solid $base-color-lighter;
+  li {
+    position: relative;
+    font-weight: 700;
+    color: $oc-gray-6;
+    display: inline-block;
+    margin-right: 1rem;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    &:hover {
+      color: $base-color-darker;
+    }
+    &.active {
+      color: $primary-color-darker;
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        bottom: -1px;
+        left: 0;
+        background: $primary-color-darker;
+      }
+    }
+  }
+}
