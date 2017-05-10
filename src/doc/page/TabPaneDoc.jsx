@@ -7,6 +7,12 @@ import {
 } from '../../';
 
 class TabPaneDoc extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeTab: 'two'
+    };
+  }
   render() {
     return (
       <div className="main-content__doc">
@@ -15,8 +21,8 @@ class TabPaneDoc extends Component {
         <h2>Usage</h2>
         <SyntaxHighlighter language="javascript" style={github}>{`import { Modal } from 'straylab-ui';`}</SyntaxHighlighter>
         <h2>Props</h2>
-        <TabPane className="basic" defaultActiveTab="two">
-          <TabPane.Tab tab="one">
+        <TabPane className="basic" activeTab={this.state.activeTab}>
+          <TabPane.Tab tab="one" onClick={(tab) => { this.setState({ activeTab: tab }); }}>
             Tab 1
           </TabPane.Tab>
           <TabPane.Tab tab="two">

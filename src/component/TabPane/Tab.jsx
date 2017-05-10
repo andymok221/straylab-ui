@@ -5,12 +5,26 @@ class Tab extends Component {
   static getType() {
     return 'Tab';
   }
+
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(tab) {
+    return () => {
+      this.props.setActive(tab);
+      if (this.props.onClick) {
+        this.props.onClick(tab);
+      }
+    };
+  }
+
   render() {
     const {
       children,
       tab,
       activeTab,
-      setActive,
       className,
       disabled
     } = this.props;
@@ -23,7 +37,7 @@ class Tab extends Component {
       );
     }
     return (
-      <li onClick={setActive(tab)} className={classNames(finalClassName, { active: activeTab === tab })}>{children}</li>
+      <li onClick={this.onClick(tab)} className={classNames(finalClassName, { active: activeTab === tab })}>{children}</li>
     );
   }
 }
@@ -31,6 +45,7 @@ class Tab extends Component {
 Tab.propTypes = {
   children: React.PropTypes.node.isRequired,
   tab: React.PropTypes.string.isRequired,
+  onClick: React.PropTypes.func,
   disabled: React.PropTypes.bool,
   activeTab: React.PropTypes.string,
   setActive: React.PropTypes.func,
@@ -39,6 +54,7 @@ Tab.propTypes = {
 
 Tab.defaultProps = {
   activeTab: undefined,
+  onClick: undefined,
   disabled: false,
   setActive: undefined,
   className: ''
