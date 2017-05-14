@@ -17,7 +17,8 @@
   }
   &-- {
     &primary {
-      .pie__base {
+      .pie__base,
+      .pie__right-half-empty {
         border: 3px solid $primary-color-lightest;
       }
       .pie__left-half,
@@ -26,7 +27,8 @@
       }
     }
     &secondary {
-      .pie__base {
+      .pie__base,
+      .pie__right-half-empty {
         border: 3px solid $secondary-color-lightest;
       }
       .pie__left-half,
@@ -36,7 +38,8 @@
     }
     &color- {
       &red {
-        .pie__base {
+        .pie__base,
+        .pie__right-half-empty {
           border: 3px solid $red-color-lightest;
         }
         .pie__left-half,

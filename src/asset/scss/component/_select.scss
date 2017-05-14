@@ -1,14 +1,14 @@
 .Select {
   margin-bottom: 0.5em;
 }
-.Select-placeholder {
-  padding-left: 10px;
-  padding-right: 10px;
+.Select-value, .Select-placeholder {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
 }
 
 .Select-input {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
   > input {
     padding: 0;
     line-height: 34px;

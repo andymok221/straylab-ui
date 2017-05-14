@@ -166,7 +166,7 @@ class FormDoc extends Component {
             <Checkbox value="true" name="agree" label="I agree" />
           </Form.Group>
           <Form.Group>
-            <label>Checkbox</label>
+            <label>Select</label>
             <Select />
           </Form.Group>
         </Form>

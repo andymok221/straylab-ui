@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { github } from 'react-syntax-highlighter/dist/styles';
-import {
-  Table
-} from '../../';
+import { Table } from '../../';
 
 class ProgressDoc extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      offCanvas: false,
-    }
+      offCanvas: false
+    };
   }
   render() {
     return (
@@ -18,7 +16,10 @@ class ProgressDoc extends Component {
         <h1>Table</h1>
         <p>A traditional table component.</p>
         <h2>Usage</h2>
-        <SyntaxHighlighter language="javascript" style={github}>{`import { Table } from 'straylab-ui';`}</SyntaxHighlighter>
+        <SyntaxHighlighter
+          language="javascript"
+          style={github}
+        >{'import { Table } from \'straylab-ui\';'}</SyntaxHighlighter>
         <h2>Props</h2>
         <Table>
           <Table.Header>

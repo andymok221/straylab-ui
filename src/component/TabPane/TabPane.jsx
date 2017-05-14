@@ -23,24 +23,27 @@ class TabPane extends Component {
     });
   }
   render() {
-    const {
-      children,
-      className
-    } = this.props;
+    const { children, className } = this.props;
     const finalClassName = `tab-pane ${className}`.trim();
     return (
       <div className={finalClassName}>
         <ul className="tab-pane__tabs">
           {React.Children.map(children, (child) => {
             if (child.type.getType() === 'Tab') {
-              return React.cloneElement(child, { onClickTab: this.onClickTab, setActive: this.setActive, activeTab: this.state.activeTab });
+              return React.cloneElement(child, {
+                onClickTab: this.onClickTab,
+                setActive: this.setActive,
+                activeTab: this.state.activeTab
+              });
             }
             return null;
           })}
         </ul>
         {React.Children.map(children, (child) => {
           if (child.type.getType() === 'Pane') {
-            return React.cloneElement(child, { activeTab: this.state.activeTab });
+            return React.cloneElement(child, {
+              activeTab: this.state.activeTab
+            });
           }
           return null;
         })}
