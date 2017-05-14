@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Progress extends Component {
   render() {
-    let {
+    const {
       id,
       primary,
       secondary,

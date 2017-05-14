@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Input extends Component {
   render() {
-    let {
+    const {
       id,
       name,
       placeholder,

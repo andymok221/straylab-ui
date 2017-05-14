@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Message extends Component {
   render() {
-    let {
+    const {
       primary,
       secondary,
       color,

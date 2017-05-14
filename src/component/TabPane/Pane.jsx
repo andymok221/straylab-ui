@@ -8,25 +8,20 @@ class Pane extends Component {
   render() {
     const {
       children,
-      tab,
-      activeTab,
       className
     } = this.props;
     const finalClassName = `tab-pane__pane ${className}`.trim();
     return (
-      <div className={classNames(finalClassName, { hidden: activeTab !== tab })}>{children}</div>
+      <div className={classNames(finalClassName)}>{children}</div>
     );
   }
 }
 Pane.propTypes = {
   children: React.PropTypes.node.isRequired,
-  tab: React.PropTypes.string.isRequired,
-  activeTab: React.PropTypes.string,
   className: React.PropTypes.string
 };
 
 Pane.defaultProps = {
-  activeTab: undefined,
   className: ''
 };
 

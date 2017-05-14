@@ -32,8 +32,6 @@ class PieDoc extends Component {
               </Table.HeaderCell>
             </Table.Row>
           </Table.Header>
-          <Table.Body>
-          </Table.Body>
         </Table>
         <h2>Color</h2>
         <h3>Default</h3>

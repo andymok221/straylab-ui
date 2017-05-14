@@ -40,7 +40,7 @@ class TabPane extends Component {
           })}
         </ul>
         {React.Children.map(children, (child) => {
-          if (child.type.getType() === 'Pane') {
+          if (child.type.getType() === 'Pane' && child.props.tab === this.state.activeTab) {
             return React.cloneElement(child, {
               activeTab: this.state.activeTab
             });
