@@ -104,6 +104,8 @@ class MessageDoc extends Component {
         <Message secondary header="Secondary">Content</Message>
         <SyntaxHighlighter language="html" style={github}>{`<Message color="red" header="Red">Content</Message>`}</SyntaxHighlighter>
         <Message color="red" header="Red">Content</Message>
+        <SyntaxHighlighter language="html" style={github}>{`<Message color="green" header="Green">Content</Message>`}</SyntaxHighlighter>
+        <Message color="green" header="Green">Content</Message>
       </div>
     );
   }

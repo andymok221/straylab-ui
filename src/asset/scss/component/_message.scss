@@ -33,6 +33,13 @@
           color: $red-color-darkest;
         }
       }
+      &green {
+        background: $green-color-lightest;
+        color: $green-color-darker;
+        .message__header {
+          color: $green-color-darkest;
+        }
+      }
     }
   }
 }
