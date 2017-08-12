@@ -19,7 +19,7 @@ class TabPaneDoc extends Component {
         <SyntaxHighlighter
           language="javascript"
           style={github}
-        >{`import { Modal } from 'straylab-ui';`}</SyntaxHighlighter>
+        >{`import { TabPane } from 'straylab-ui';`}</SyntaxHighlighter>
         <h2>Props</h2>
         <TabPane className="basic" activeTab={this.state.activeTab}>
           <TabPane.Tab

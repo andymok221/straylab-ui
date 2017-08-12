@@ -8,6 +8,10 @@
       border: 1px solid $red-color-lighter;
       background-color: $red-color-lightest;
     }
+    &-success {
+      border: 1px solid $green-color-lighter;
+      background-color: $green-color-lightest;
+    }
     &-focus {
       border: 1px solid $base-color-darker;
     }
@@ -71,16 +75,40 @@
   }
   .select {
     &--state {
+      &-success {
+        .Select-control {
+          border: 0;
+          background: none;
+        }
+        .select--state-disabled {
+          .Select-control {
+            height: 19px;
+            background-color: transparent !important;
+          }
+        }
+      }
       &-error {
         .Select-control {
           border: 0;
           background: none;
+        }
+        .select--state-disabled {
+          .Select-control {
+            height: 19px;
+            background-color: transparent !important;
+          }
         }
       }
       &-disabled {
         .Select-control {
           border: 0;
           background: none;
+        }
+        .select--state-disabled {
+          .Select-control {
+            height: 19px;
+            background-color: transparent !important;
+          }
         }
       }
     }

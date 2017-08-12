@@ -4,6 +4,7 @@ class FormGroup extends Component {
   render() {
     const {
       children,
+      success,
       error,
       disabled,
       focus,
@@ -14,6 +15,8 @@ class FormGroup extends Component {
       formGroupState = 'form-group--state-focus';
     } else if (error) {
       formGroupState = 'form-group--state-error';
+    } else if (success) {
+      formGroupState = 'form-group--state-success';
     } else if (disabled) {
       formGroupState = 'form-group--state-disabled';
     }
