@@ -8,7 +8,7 @@ class Message extends Component {
       color,
       header,
       className,
-      children
+      children,
     } = this.props;
     let messageType = '';
     let messageColor = '';
@@ -23,10 +23,9 @@ class Message extends Component {
     return (
       <div className={finalClassName}>
         {!!header &&
-        <div className="message__header">
-          {header}
-        </div>
-        }
+          <div className="message__header">
+            {header}
+          </div>}
         {children}
       </div>
     );
@@ -39,7 +38,7 @@ Message.propTypes = {
   color: React.PropTypes.string,
   header: React.PropTypes.string,
   className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired
+  children: React.PropTypes.node.isRequired,
 };
 
 Message.defaultProps = {
@@ -47,7 +46,7 @@ Message.defaultProps = {
   secondary: undefined,
   color: undefined,
   header: undefined,
-  className: ''
+  className: '',
 };
 
 export default Message;

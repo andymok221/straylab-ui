@@ -6,20 +6,20 @@ class TabPane extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: props.defaultActiveTab || props.activeTab
+      activeTab: props.defaultActiveTab || props.activeTab,
     };
     this.setActive = this.setActive.bind(this);
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.activeTab) {
       this.setState({
-        activeTab: nextProps.activeTab
+        activeTab: nextProps.activeTab,
       });
     }
   }
   setActive(tab) {
     this.setState({
-      activeTab: tab
+      activeTab: tab,
     });
   }
   render() {
@@ -33,16 +33,19 @@ class TabPane extends Component {
               return React.cloneElement(child, {
                 onClickTab: this.onClickTab,
                 setActive: this.setActive,
-                activeTab: this.state.activeTab
+                activeTab: this.state.activeTab,
               });
             }
             return null;
           })}
         </ul>
         {React.Children.map(children, (child) => {
-          if (child.type.getType() === 'Pane' && child.props.tab === this.state.activeTab) {
+          if (
+            child.type.getType() === 'Pane' &&
+            child.props.tab === this.state.activeTab
+          ) {
             return React.cloneElement(child, {
-              activeTab: this.state.activeTab
+              activeTab: this.state.activeTab,
             });
           }
           return null;
@@ -56,13 +59,13 @@ TabPane.propTypes = {
   children: React.PropTypes.node.isRequired,
   defaultActiveTab: React.PropTypes.string,
   activeTab: React.PropTypes.string,
-  className: React.PropTypes.string
+  className: React.PropTypes.string,
 };
 
 TabPane.defaultProps = {
   defaultActiveTab: undefined,
   activeTab: undefined,
-  className: ''
+  className: '',
 };
 
 TabPane.Tab = Tab;

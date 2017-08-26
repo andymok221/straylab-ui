@@ -12,13 +12,24 @@ class OffCanvas extends Component {
     document.removeEventListener('click', this.onClick);
   }
   onClick(event) {
-    if (!this.wrapper.contains(event.target) && this.wrapper.getBoundingClientRect().left === 0) this.props.onClose();
+    if (this.props.direction === 'left') {
+      if (
+        !this.wrapper.contains(event.target) &&
+        this.wrapper.getBoundingClientRect().left === 0
+      ) {
+        this.props.onClose();
+      }
+    } else {
+      if (
+        !this.wrapper.contains(event.target) &&
+        this.wrapper.getBoundingClientRect().right === document.documentElement.clientWidth
+      ) {
+        this.props.onClose();
+      }
+    }
   }
   render() {
-    const {
-      className,
-      children
-    } = this.props;
+    const { className, children, direction } = this.props;
     let style = {};
     let offCanvasStateClass = '';
     if (this.props.open) {
@@ -26,11 +37,19 @@ class OffCanvas extends Component {
       style.transform = 'translate(0)';
     } else {
       offCanvasStateClass = 'off-canvas--close';
-      style.transform = 'translate(-100%)';
+      if (direction === 'left') {
+        style.transform = 'translate(-100%)';
+      } else {
+        style.transform = 'translate(100%)';
+      }
     }
-    const finalClassName = `off-canvas ${offCanvasStateClass} ${className}`.trim();
+    const finalClassName = `off-canvas--${direction} ${offCanvasStateClass} ${className}`.trim();
     return (
-      <div style={style} ref={node => (this.wrapper = node)} className={finalClassName}>
+      <div
+        style={style}
+        ref={node => (this.wrapper = node)}
+        className={finalClassName}
+      >
         {children}
       </div>
     );
@@ -41,11 +60,13 @@ OffCanvas.propTypes = {
   open: React.PropTypes.bool.isRequired,
   onClose: React.PropTypes.func.isRequired,
   className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired
+  direction: React.PropTypes.string,
+  children: React.PropTypes.node.isRequired,
 };
 
 OffCanvas.defaultProps = {
-  className: ''
+  className: '',
+  direction: 'left',
 };
 
 export default OffCanvas;

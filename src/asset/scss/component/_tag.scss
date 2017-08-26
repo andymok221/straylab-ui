@@ -1,0 +1,39 @@
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+  background: $base-color-lightest;
+  color: $base-color-darker;
+  &-- {
+    &primary {
+      background: $primary-color-lightest;
+      color: $primary-color-darker;
+      .message__header {
+        color: $primary-color-darker;
+      }
+    }
+    &secondary {
+      background: $secondary-color-lightest;
+      color: $secondary-color-darker;
+      .message__header {
+        color: $secondary-color-darker;
+      }
+    }
+    &color- {
+      &red {
+        background: $red-color-lightest;
+        color: $red-color-darker;
+        .message__header {
+          color: $red-color-darkest;
+        }
+      }
+      &green {
+        background: $green-color-lightest;
+        color: $green-color-darker;
+        .message__header {
+          color: $green-color-darkest;
+        }
+      }
+    }
+  }
+}

@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 
 class FormGroup extends Component {
   render() {
-    const {
-      children,
-      success,
-      error,
-      disabled,
-      focus,
-      className
-    } = this.props;
+    const { children, success, error, disabled, focus, className } = this.props;
     let formGroupState = '';
     if (focus) {
       formGroupState = 'form-group--state-focus';
@@ -34,7 +27,7 @@ FormGroup.propTypes = {
   disabled: React.PropTypes.bool,
   focus: React.PropTypes.bool,
   className: React.PropTypes.string,
-  children: React.PropTypes.node.isRequired
+  children: React.PropTypes.node.isRequired,
 };
 
 FormGroup.defaultProps = {
@@ -42,7 +35,7 @@ FormGroup.defaultProps = {
   disabled: false,
   focus: false,
   className: '',
-  onChange: undefined
+  onChange: undefined,
 };
 
 export default FormGroup;

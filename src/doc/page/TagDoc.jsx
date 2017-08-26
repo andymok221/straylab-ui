@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { github } from 'react-syntax-highlighter/dist/styles';
-import { OffCanvas, Button, Table } from '../../';
+import { Tag, Button, Table } from '../../';
 
-class OffCanvasDoc extends Component {
+class TagDoc extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,11 +13,11 @@ class OffCanvasDoc extends Component {
   render() {
     return (
       <div className="main-content__doc">
-        <h1>Off Canvas</h1>
-        <p>An area which which slides in upon activation</p>
+        <h1>Tag</h1>
+        <p>A simple tag</p>
         <h2>Usage</h2>
         <SyntaxHighlighter language="javascript" style={github}>
-          {"import { OffCanvas } from 'straylab-ui';"}
+          {"import { Tag } from 'straylab-ui';"}
         </SyntaxHighlighter>
         <h2>Props</h2>
         <Table>
@@ -31,22 +31,22 @@ class OffCanvasDoc extends Component {
           </Table.Header>
           <Table.Body>
             <Table.Row>
-              <Table.Cell>open*</Table.Cell>
+              <Table.Cell>primary</Table.Cell>
               <Table.Cell />
               <Table.Cell>Boolean</Table.Cell>
-              <Table.Cell>Whether the off canvas is shown</Table.Cell>
+              <Table.Cell>Use it for primary styling</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>onClose*</Table.Cell>
+              <Table.Cell>secondary</Table.Cell>
               <Table.Cell />
-              <Table.Cell>Function</Table.Cell>
-              <Table.Cell>Function to be called when closing</Table.Cell>
+              <Table.Cell>Boolean</Table.Cell>
+              <Table.Cell>Use it for secondary styling</Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>direction</Table.Cell>
+              <Table.Cell>color</Table.Cell>
               <Table.Cell />
               <Table.Cell>string</Table.Cell>
-              <Table.Cell>The position of off-canvas</Table.Cell>
+              <Table.Cell>The color of the tag</Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>className</Table.Cell>
@@ -57,27 +57,19 @@ class OffCanvasDoc extends Component {
           </Table.Body>
         </Table>
         <h2>Demo</h2>
-        <SyntaxHighlighter language="html" style={github}>{`<OffCanvas
-  open={this.state.offCanvas}
-  onClose={() => this.setState({ offCanvas: false })}
->
+        <SyntaxHighlighter language="html" style={github}>{`<Tag>
   Something to be put
-</OffCanvas>`}</SyntaxHighlighter>
+</Tag>`}</SyntaxHighlighter>
         <p>
-          <Button primary onClick={() => this.setState({ offCanvas: true })}>
-            Open
-          </Button>
+          <Tag>Something to be put</Tag>
+          <Tag primary>Something to be put</Tag>
+          <Tag secondary>Something to be put</Tag>
+          <Tag color="green">Something to be put</Tag>
+          <Tag color="red">Something to be put</Tag>
         </p>
-        <OffCanvas
-          direction="left"
-          open={this.state.offCanvas}
-          onClose={() => this.setState({ offCanvas: false })}
-        >
-          Something to be put
-        </OffCanvas>
       </div>
     );
   }
 }
 
-export default OffCanvasDoc;
+export default TagDoc;
